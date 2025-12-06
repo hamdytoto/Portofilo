@@ -43,14 +43,14 @@ export default function SkillsPage() {
 
       <Tabs defaultValue="frontend" className="mb-12">
         <TabsList className="mx-auto flex justify-center">
+          <TabsTrigger value="backend" className="flex items-center gap-2">
+            <Server className="h-4 w-4" /> Backend
+          </TabsTrigger>
           <TabsTrigger value="frontend" className="flex items-center gap-2">
             <Code className="h-4 w-4" /> Frontend
           </TabsTrigger>
           <TabsTrigger value="design" className="flex items-center gap-2">
             <Palette className="h-4 w-4" /> Design
-          </TabsTrigger>
-          <TabsTrigger value="backend" className="flex items-center gap-2">
-            <Server className="h-4 w-4" /> Backend
           </TabsTrigger>
           <TabsTrigger value="tools" className="flex items-center gap-2">
             <Database className="h-4 w-4" /> Tools
@@ -90,18 +90,18 @@ export default function SkillsPage() {
           <ul className="space-y-4">
             <li className="flex items-center gap-2">
               <span className="w-3 h-3 bg-orange-500 rounded-full"></span>
-              <span className="font-medium">English</span>
+              <span className="font-medium">Arabic</span>
               <span className="text-muted-foreground ml-auto">Native</span>
             </li>
             <li className="flex items-center gap-2">
               <span className="w-3 h-3 bg-orange-500 rounded-full"></span>
-              <span className="font-medium">Spanish</span>
+              <span className="font-medium">English</span>
               <span className="text-muted-foreground ml-auto">Fluent</span>
             </li>
             <li className="flex items-center gap-2">
               <span className="w-3 h-3 bg-orange-500 rounded-full"></span>
               <span className="font-medium">French</span>
-              <span className="text-muted-foreground ml-auto">Intermediate</span>
+              <span className="text-muted-foreground ml-auto">Basic</span>
             </li>
           </ul>
         </motion.div>

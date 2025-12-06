@@ -189,7 +189,7 @@ export default function ContactPage() {
                     </div>
                     <div>
                       <h3 className="font-medium">Email</h3>
-                      <p className="text-muted-foreground">contact@example.com</p>
+                      <p className="text-muted-foreground">hamdytoto552@gmail.com</p>
                     </div>
                   </div>
                   <div className="flex items-start gap-4">
@@ -198,7 +198,7 @@ export default function ContactPage() {
                     </div>
                     <div>
                       <h3 className="font-medium">Phone</h3>
-                      <p className="text-muted-foreground">+1 (123) 456-7890</p>
+                      <p className="text-muted-foreground">01124116808</p>
                     </div>
                   </div>
                   <div className="flex items-start gap-4">
@@ -207,7 +207,7 @@ export default function ContactPage() {
                     </div>
                     <div>
                       <h3 className="font-medium">Location</h3>
-                      <p className="text-muted-foreground">San Francisco, CA</p>
+                      <p className="text-muted-foreground">Alexandria , Egypt</p>
                     </div>
                   </div>
                 </motion.div>
@@ -217,7 +217,7 @@ export default function ContactPage() {
                 <h3 className="font-medium mb-4">Connect With Me</h3>
                 <div className="flex gap-4">
                   <a
-                    href="https://github.com"
+                    href="https://github.com/hamdytoto"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="bg-orange-100 dark:bg-orange-900/30 p-2 rounded-lg text-orange-600 dark:text-orange-400 hover:bg-orange-200 dark:hover:bg-orange-800/30 transition-colors"
@@ -226,7 +226,7 @@ export default function ContactPage() {
                     <span className="sr-only">GitHub</span>
                   </a>
                   <a
-                    href="https://linkedin.com"
+                    href="https://www.linkedin.com/in/hamdy-abd-elmohsen/"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="bg-orange-100 dark:bg-orange-900/30 p-2 rounded-lg text-orange-600 dark:text-orange-400 hover:bg-orange-200 dark:hover:bg-orange-800/30 transition-colors"
@@ -235,7 +235,7 @@ export default function ContactPage() {
                     <span className="sr-only">LinkedIn</span>
                   </a>
                   <a
-                    href="https://twitter.com"
+                    href="https://x.com/ElmohsenHamdy"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="bg-orange-100 dark:bg-orange-900/30 p-2 rounded-lg text-orange-600 dark:text-orange-400 hover:bg-orange-200 dark:hover:bg-orange-800/30 transition-colors"

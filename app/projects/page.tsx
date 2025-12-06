@@ -73,6 +73,18 @@ export default function ProjectsPage() {
 }
 
 function ProjectGrid({ projects }: { projects: any }) {
+	if (projects.length === 0) {
+		return (
+			<div className="text-center py-10">
+				<p className="text-muted-foreground text-lg">
+					No projects found in this category.
+				</p>
+				<p className="text-sm text-zinc-500 dark:text-zinc-400 mt-1">
+					Please select another filter to explore more work.
+				</p>
+			</div>
+		);
+	}
 	const container = {
 		hidden: { opacity: 0 },
 		show: {
@@ -99,8 +111,19 @@ function ProjectGrid({ projects }: { projects: any }) {
 				<motion.div
 					key={project.id}
 					variants={item}
-					className="group bg-white dark:bg-zinc-900 rounded-xl overflow-hidden border border-orange-100 dark:border-orange-900/20 shadow-md hover:shadow-lg transition-all"
+					className="relative group bg-white dark:bg-zinc-900 rounded-xl overflow-hidden border border-orange-100 dark:border-orange-900/20 shadow-md hover:shadow-lg transition-all"
 				>
+					{/* Project Type Badge */}
+					<div className="absolute top-3 left-3 z-10">
+						<span
+							className={`px-3 py-1 text-xs font-medium rounded-full text-white ${
+								typeColors[project.type] || "bg-gray-500/90"
+							}`}
+						>
+							{project.type}
+						</span>
+					</div>
+
 					<div className="aspect-video overflow-hidden">
 						<Image
 							src={project.image || "/placeholder.svg"}
@@ -110,13 +133,15 @@ function ProjectGrid({ projects }: { projects: any }) {
 							className="object-cover transition-transform duration-500 group-hover:scale-105"
 						/>
 					</div>
+
 					<div className="p-6">
 						<h3 className="text-xl font-semibold mb-2">{project.title}</h3>
 						<p className="text-muted-foreground mb-4 line-clamp-2">
 							{project.description}
 						</p>
+
 						<div className="flex flex-wrap gap-2 mb-4">
-							{project.tags.map((tag: any, index: any) => (
+							{project.tags.map((tag: any, index: number) => (
 								<span
 									key={index}
 									className="px-2 py-1 bg-orange-100 dark:bg-orange-900/20 text-orange-600 dark:text-orange-400 rounded text-xs"
@@ -125,6 +150,7 @@ function ProjectGrid({ projects }: { projects: any }) {
 								</span>
 							))}
 						</div>
+
 						<div className="flex gap-3">
 							<Button
 								asChild
@@ -147,3 +173,9 @@ function ProjectGrid({ projects }: { projects: any }) {
 		</motion.div>
 	);
 }
+const typeColors: Record<string, string> = {
+	Frontend: "bg-blue-500/90",
+	Backend: "bg-green-500/90",
+	"Full-Stack": "bg-green-500/90",
+	Other: "bg-gray-500/90",
+};

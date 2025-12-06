@@ -8,12 +8,7 @@ import { Download, Briefcase, GraduationCap, Award, Calendar } from "lucide-reac
 export default function CVPage() {
   const container = {
     hidden: { opacity: 0 },
-    show: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.1,
-      },
-    },
+    show: { opacity: 1, transition: { staggerChildren: 0.1 } },
   }
 
   const item = {
@@ -23,6 +18,7 @@ export default function CVPage() {
 
   return (
     <div className="container py-16">
+      {/* Header */}
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
@@ -33,13 +29,24 @@ export default function CVPage() {
           <h1 className="text-4xl font-bold mb-2">
             Curriculum <span className="text-orange-500">Vitae</span>
           </h1>
-          <p className="text-muted-foreground max-w-2xl">My professional background, experience, and education.</p>
+          <p className="text-muted-foreground max-w-2xl">
+            Back-End Developer | Node.js | Express.js | NestJS | MongoDB
+          </p>
+          <p className="text-muted-foreground mt-2">
+            Alexandria, Egypt | 011241168608 | 01004549758 | Military Status: Exempt
+          </p>
         </div>
-        <Button className="bg-orange-500 hover:bg-orange-600">
-          <Download className="mr-2 h-4 w-4" /> Download CV
+        <Button
+          className="bg-orange-500 hover:bg-orange-600"
+          asChild
+        >
+          <a href="https://drive.google.com/file/d/1o2H88wA7hjqI6h4roev8kF9YqMpJjjII/view?usp=drive_link" target="_blank">
+            <Download className="mr-2 h-4 w-4" /> Download CV
+          </a>
         </Button>
       </motion.div>
 
+      {/* Tabs */}
       <Tabs defaultValue="experience" className="mb-12">
         <TabsList className="mx-auto flex justify-center mb-8">
           <TabsTrigger value="experience" className="flex items-center gap-2">
@@ -49,75 +56,81 @@ export default function CVPage() {
             <GraduationCap className="h-4 w-4" /> Education
           </TabsTrigger>
           <TabsTrigger value="certifications" className="flex items-center gap-2">
-            <Award className="h-4 w-4" /> Certifications
+            <Award className="h-4 w-4" /> Courses & Internships
           </TabsTrigger>
         </TabsList>
+
+        {/* Experience */}
         <TabsContent value="experience">
           <motion.div variants={container} initial="hidden" animate="show" className="space-y-8">
             <ExperienceItem
-              title="Senior Frontend Developer"
-              company="TechCorp Inc."
-              period="2021 - Present"
-              description="Led the frontend development team in building a complex SaaS platform using React, Next.js, and TypeScript. Implemented responsive designs, optimized performance, and mentored junior developers."
+              title="Backend Developer – E-Commerce Platform (Africa Store clone)"
+              company="Remote"
+              period="Feb 2025 – May 2025"
+              description="Built a full-featured e-commerce platform with complete order lifecycle management and admin capabilities."
               responsibilities={[
-                "Architected and developed frontend applications using React and Next.js",
-                "Implemented state management solutions with Redux and Context API",
-                "Optimized application performance and loading times",
-                "Collaborated with UX/UI designers to implement responsive designs",
-                "Mentored junior developers and conducted code reviews",
+                "Developed scalable REST & GraphQL APIs using NestJS, improving response times by 25%",
+                "Implemented role-based access control, full order workflows, and real-time updates",
+                "Integrated Cloudinary for media uploads",
+                "Designed backend architecture supporting scalable order, product, and admin features",
+                "Tech: NestJS, MongoDB, Mongoose, JWT, GraphQL, REST, Socket.IO, Docker, Cloudinary",
+                "Repo: https://github.com/hamdytoto/Africa_Store_Backend",
               ]}
             />
             <ExperienceItem
-              title="Frontend Developer"
-              company="StartupX"
-              period="2019 - 2021"
-              description="Worked on developing and maintaining multiple web applications for clients in various industries. Focused on creating responsive, accessible, and performant user interfaces."
+              title="Backend Developer – Job Nest (LinkedIn Similar)"
+              company="Remote"
+              period="Oct 2024 – Jun 2025"
+              description="Professional platform for job posting, applications, and recruiter communication."
               responsibilities={[
-                "Developed responsive web applications using React and JavaScript",
-                "Implemented UI components following design specifications",
-                "Integrated RESTful APIs and managed application state",
-                "Collaborated with cross-functional teams to deliver projects on time",
-                "Participated in agile development processes and sprint planning",
+                "Implemented secure authentication using JWT",
+                "Integrated real-time messaging with Socket.IO",
+                "Containerized application with Docker and reusable middleware for access control",
+                "Tech: Node.js, Express.js, Socket.IO, MongoDB, Mongoose, Cloudinary, Docker",
+                "Repo: https://github.com/hamdytoto/JobNest",
               ]}
             />
             <ExperienceItem
-              title="Junior Web Developer"
-              company="Digital Agency"
-              period="2017 - 2019"
-              description="Started as a junior developer working on various client websites and web applications. Gained experience in frontend technologies and responsive design principles."
+              title="Backend Developer – Messaging Platform (Saraha App)"
+              company="Remote"
+              period="Aug 2024 – Sep 2024"
+              description="Anonymous messaging app with real-time feedback and media sharing."
               responsibilities={[
-                "Built and maintained client websites using HTML, CSS, and JavaScript",
-                "Implemented responsive designs and ensured cross-browser compatibility",
-                "Assisted senior developers with larger projects and tasks",
-                "Participated in client meetings and requirement gathering",
-                "Learned and applied best practices for web development",
+                "Created RESTful APIs using Node.js, Express.js, MongoDB with Mongoose",
+                "Configured secure authentication with JWT",
+                "Integrated Cloudinary for media uploads and added message moderation",
+                "Conducted code reviews resulting in 15% reduction in bugs",
+                "Tech: Node.js, Express.js, MongoDB, Mongoose, JWT, Cloudinary",
+                "Repo: https://github.com/hamdytoto/SarahaApp",
+              ]}
+            />
+            <ExperienceItem
+              title="Backend Developer – Social App"
+              company="Remote"
+              period="Jan 2024 – Feb 2024"
+              description="Real-time social platform combining chat, posts, comments, and notifications."
+              responsibilities={[
+                "Developed scalable backend using Node.js, Express.js, Socket.IO",
+                "Implemented APIs for user interactions and content management",
+                "Enhanced feature alignment by 20% using JIRA for tracking",
+                "Tech: Node.js, Express.js, MongoDB, Mongoose, JWT, Cloudinary, Socket.IO",
+                "Repo: https://github.com/hamdytoto/socialApplication",
               ]}
             />
           </motion.div>
         </TabsContent>
+
+        {/* Education */}
         <TabsContent value="education">
           <motion.div variants={container} initial="hidden" animate="show" className="space-y-8">
             <EducationItem
-              degree="Master of Science in Computer Science"
-              institution="Tech University"
-              period="2015 - 2017"
-              description="Specialized in Web Technologies and Human-Computer Interaction. Thesis on 'Optimizing User Experience in Progressive Web Applications'."
+              degree="Bachelor Degree of Computer Science"
+              institution="Faculty of Computer Science and Information Technology, Damanhur, Egypt"
+              period="Sep 2021 - Jun 2025"
+              description='Cumulative Grade: Very Good (3.3/4). Graduation Project: Online Ticketing System "Excellent".'
               courses={[
-                "Advanced Web Development",
-                "User Experience Design",
-                "Human-Computer Interaction",
-                "Data Visualization",
-                "Software Engineering Practices",
-              ]}
-            />
-            <EducationItem
-              degree="Bachelor of Science in Information Technology"
-              institution="State University"
-              period="2011 - 2015"
-              description="Graduated with honors. Focused on software development and web technologies."
-              courses={[
-                "Introduction to Programming",
-                "Web Development Fundamentals",
+                "Software Development",
+                "Web Technologies",
                 "Database Systems",
                 "Object-Oriented Programming",
                 "Software Project Management",
@@ -125,36 +138,39 @@ export default function CVPage() {
             />
           </motion.div>
         </TabsContent>
+
+        {/* Courses & Internships */}
         <TabsContent value="certifications">
-          <motion.div
-            variants={container}
-            initial="hidden"
-            animate="show"
-            className="grid grid-cols-1 md:grid-cols-2 gap-8"
-          >
+          <motion.div variants={container} initial="hidden" animate="show" className="space-y-8">
             <CertificationItem
-              title="Advanced React and Redux"
-              issuer="Frontend Masters"
-              date="2022"
-              description="Comprehensive course on advanced React patterns, Redux state management, and performance optimization techniques."
+              title="Fullstack Development"
+              issuer="Azm Squad"
+              date="7th Aug – 20th Oct 2025"
+              description="Practical fullstack development internship focusing on MERN stack projects."
             />
             <CertificationItem
-              title="Next.js Developer Certification"
-              issuer="Vercel"
-              date="2021"
-              description="Official certification for Next.js development, covering SSR, SSG, ISR, and deployment strategies."
+              title="MERN Stack Development"
+              issuer="ITI, Damanhur, Egypt"
+              date="7th Nov – 20th Feb 2025"
+              description="Hands-on projects covering Node.js, Express, React, and MongoDB."
             />
             <CertificationItem
-              title="TypeScript Professional"
-              issuer="TypeScript Academy"
-              date="2020"
-              description="In-depth certification on TypeScript, covering advanced types, generics, and integration with frontend frameworks."
+              title="Web Development Fundamentals"
+              issuer="ITI, Damanhur, Egypt"
+              date="1st Sep – 14th Sep 2024"
+              description="Introduction to web development, HTML, CSS, JavaScript."
             />
             <CertificationItem
-              title="Web Accessibility Specialist"
-              issuer="International Association of Accessibility Professionals"
-              date="2019"
-              description="Certification focused on implementing accessible web applications following WCAG guidelines."
+              title="Code Alpha Internship"
+              issuer="India"
+              date="7th Nov – 15th Feb 2023"
+              description="Internship focused on practical coding skills and project implementation."
+            />
+            <CertificationItem
+              title="The Web Developer Bootcamp"
+              issuer="Colt Steele (Udemy)"
+              date="1st - 28th Oct 2023"
+              description="Comprehensive web development course covering fullstack development."
             />
           </motion.div>
         </TabsContent>

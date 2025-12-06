@@ -9,6 +9,8 @@ export const projects = [
         demoUrl: "https://africastores.netlify.app/mainlanding",
         githubUrl: "https://github.com/hamdytoto/Africa_Store_Backend",
         category: "backend",
+        type: "Backend",
+        featured: true,
     },
     {
         id: 2,
@@ -20,6 +22,8 @@ export const projects = [
         demoUrl: "https://ticketory.netlify.app",
         githubUrl: "https://github.com/hamdytoto/ticktory",
         category: "frontend",
+        type: "Frontend",   
+        featured: true,
     },
     {
         id: 3,
@@ -31,6 +35,7 @@ export const projects = [
         demoUrl: "https://hamdytoto.netlify.app",
         githubUrl: "https://github.com/hamdytoto/Portofilo",
         category: "frontend",
+        type: "Frontend",
     },
     {
         id: 5,
@@ -41,6 +46,7 @@ export const projects = [
         tags: ["React", "TypeScript", "API Integration", "Geolocation"],
         demoUrl: "https://weatherlytoto.netlify.app/",
         githubUrl: "https://github.com/hamdytoto/Weatherly",
+        type: "Frontend",
         category: "frontend",
     },
     {
@@ -53,6 +59,7 @@ export const projects = [
         demoUrl: "https://hamdytoto.github.io/Youtube_simulation/index.html",
         githubUrl: "https://github.com/hamdytoto/Youtube_simulation",
         category: "frontend",
+        type: "Frontend",
     },
 
     // ------------- NEW BACKEND PROJECTS -------------
@@ -66,6 +73,7 @@ export const projects = [
         demoUrl: "#",
         githubUrl: "https://github.com/hamdytoto/JobNest",
         category: "backend",
+        type: "Backend",
     },
     {
         id: 8,
@@ -77,6 +85,8 @@ export const projects = [
         demoUrl: "#",
         githubUrl: "https://github.com/hamdytoto/socialApplication",
         category: "backend",
+        type: "Backend",
+
     },
     {
         id: 9,
@@ -88,6 +98,7 @@ export const projects = [
         demoUrl: "#",
         githubUrl: "https://github.com/hamdytoto/SarahaApp",
         category: "backend",
+        type: "Backend",
     },
 
     // ------------- NEW FRONTEND PROJECTS -------------

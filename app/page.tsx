@@ -5,6 +5,7 @@ import { motion } from "framer-motion";
 import { ArrowRight, Code, Briefcase, Award, Download } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
+import { projects } from "./projects/projects";
 
 export default function Home() {
 	const container = {
@@ -243,6 +244,7 @@ export default function Home() {
 					</motion.p>
 				</motion.div>
 
+				{/* Filter only featured projects */}
 				<motion.div
 					variants={container}
 					initial="hidden"
@@ -250,104 +252,80 @@ export default function Home() {
 					viewport={{ once: true, margin: "-100px" }}
 					className="grid grid-cols-1 md:grid-cols-2 gap-8"
 				>
-					<motion.div
-						variants={item}
-						className="group relative overflow-hidden rounded-xl border border-orange-100 dark:border-orange-900/20 bg-white dark:bg-zinc-900 shadow-md hover:shadow-lg transition-shadow"
-					>
-						<div className="aspect-video overflow-hidden">
-							<Image
-								src="/placeholder.svg?height=400&width=800"
-								alt="E-commerce Project"
-								width={800}
-								height={400}
-								className="object-cover transition-transform duration-500 group-hover:scale-105"
-							/>
-						</div>
-						<div className="p-6">
-							<h3 className="text-xl font-semibold mb-2">
-								E-commerce Platform
-							</h3>
-							<p className="text-muted-foreground mb-4">
-								A full-featured e-commerce platform built with Next.js, React,
-								and TypeScript.
-							</p>
-							<div className="flex flex-wrap gap-2 mb-4">
-								<span className="px-2 py-1 bg-orange-100 dark:bg-orange-900/20 text-orange-600 dark:text-orange-400 rounded text-xs">
-									Next.js
-								</span>
-								<span className="px-2 py-1 bg-orange-100 dark:bg-orange-900/20 text-orange-600 dark:text-orange-400 rounded text-xs">
-									React
-								</span>
-								<span className="px-2 py-1 bg-orange-100 dark:bg-orange-900/20 text-orange-600 dark:text-orange-400 rounded text-xs">
-									TypeScript
-								</span>
-							</div>
-							<Button asChild variant="outline" size="sm">
-								<Link href="/projects">
-									View Project <ArrowRight className="ml-2 h-4 w-4" />
-								</Link>
-							</Button>
-						</div>
-					</motion.div>
+					{projects
+						.filter((p: any) => p.featured)
+						.map((project: any) => (
+							<motion.div
+								key={project.id}
+								variants={item}
+								className="group relative overflow-hidden rounded-xl border border-orange-100 dark:border-orange-900/20 bg-white dark:bg-zinc-900 shadow-md hover:shadow-lg transition-shadow"
+							>
+								{/* Project Type Badge */}
+								<div className="absolute top-3 left-3 z-10">
+									<span className="px-3 py-1 text-xs font-medium rounded-full bg-orange-500/90 text-white">
+										{project.type}
+									</span>
+								</div>
 
-					<motion.div
-						variants={item}
-						className="group relative overflow-hidden rounded-xl border border-orange-100 dark:border-orange-900/20 bg-white dark:bg-zinc-900 shadow-md hover:shadow-lg transition-shadow"
-					>
-						<div className="aspect-video overflow-hidden">
-							<Image
-								src="/placeholder.svg?height=400&width=800"
-								alt="Dashboard Project"
-								width={800}
-								height={400}
-								className="object-cover transition-transform duration-500 group-hover:scale-105"
-							/>
-						</div>
-						<div className="p-6">
-							<h3 className="text-xl font-semibold mb-2">
-								Analytics Dashboard
-							</h3>
-							<p className="text-muted-foreground mb-4">
-								A responsive analytics dashboard with real-time data
-								visualization.
-							</p>
-							<div className="flex flex-wrap gap-2 mb-4">
-								<span className="px-2 py-1 bg-orange-100 dark:bg-orange-900/20 text-orange-600 dark:text-orange-400 rounded text-xs">
-									React
-								</span>
-								<span className="px-2 py-1 bg-orange-100 dark:bg-orange-900/20 text-orange-600 dark:text-orange-400 rounded text-xs">
-									TypeScript
-								</span>
-								<span className="px-2 py-1 bg-orange-100 dark:bg-orange-900/20 text-orange-600 dark:text-orange-400 rounded text-xs">
-									D3.js
-								</span>
-							</div>
-							<Button asChild variant="outline" size="sm">
-								<Link href="/projects">
-									View Project <ArrowRight className="ml-2 h-4 w-4" />
-								</Link>
-							</Button>
-						</div>
-					</motion.div>
+								<div className="aspect-video overflow-hidden">
+									<Image
+										src={project.image}
+										alt={project.title}
+										width={800}
+										height={400}
+										className="object-cover transition-transform duration-500 group-hover:scale-105"
+									/>
+								</div>
+
+								<div className="p-6">
+									<h3 className="text-xl font-semibold mb-2">
+										{project.title}
+									</h3>
+									<p className="text-muted-foreground mb-4 line-clamp-2">
+										{project.description}
+									</p>
+
+									<div className="flex flex-wrap gap-2 mb-4">
+										{project.tags.map((tag: string, i: number) => (
+											<span
+												key={i}
+												className="px-2 py-1 bg-orange-100 dark:bg-orange-900/20 text-orange-600 dark:text-orange-400 rounded text-xs"
+											>
+												{tag}
+											</span>
+										))}
+									</div>
+
+									<Button asChild variant="outline" size="sm">
+										<Link href={`/projects/${project.id}`}>
+											View Project <ArrowRight className="ml-2 h-4 w-4" />
+										</Link>
+									</Button>
+								</div>
+							</motion.div>
+						))}
 				</motion.div>
 
-				<motion.div
-					variants={item}
-					initial="hidden"
-					whileInView="show"
-					viewport={{ once: true, margin: "-100px" }}
-					className="text-center mt-12"
-				>
-					<Button
-						asChild
-						size="lg"
-						className="bg-orange-500 hover:bg-orange-600"
+				{/* Show button only if there are featured projects */}
+				{projects.some((p: any) => p.featured) && (
+					<motion.div
+						variants={item}
+						initial="hidden"
+						whileInView="show"
+						viewport={{ once: true, margin: "-100px" }}
+						className="text-center mt-12"
 					>
-						<Link href="/projects">
-							View All Projects <ArrowRight className="ml-2 h-4 w-4" />
-						</Link>
-					</Button>
-				</motion.div>
+						<Button
+							asChild
+							size="lg"
+							className="bg-orange-500 hover:bg-orange-600"
+						>
+							<Link href="/projects">
+								View All Projects <ArrowRight className="ml-2 h-4 w-4" />
+							</Link>
+						</Button>
+					</motion.div>
+				)}
 			</section>
 
 			{/* CTA Section */}

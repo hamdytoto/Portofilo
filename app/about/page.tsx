@@ -13,6 +13,8 @@ import {
 	Coffee,
 	Users,
 	Globe,
+	TestTube,
+	TextSelection,
 } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
@@ -59,7 +61,7 @@ export default function AboutPage() {
 					<div className="relative">
 						<div className="aspect-square overflow-hidden rounded-xl border-8 border-orange-100 dark:border-orange-900/30 shadow-xl">
 							<Image
-								src="/placeholder.svg?height=600&width=600"
+								src="/hamdy.jpg"
 								alt="Developer Portrait"
 								width={600}
 								height={600}
@@ -85,16 +87,14 @@ export default function AboutPage() {
 						<p className="text-muted-foreground mb-4">
 							Hello! I'm a passionate MERN Stack Developer with over 2 years of
 							experience building full-stack web applications using MongoDB,
-							Express.js, React, and Node.js. I specialize in creating scalable,
+							Express.js, NestJs, React, and Node.js. I specialize in creating scalable,
 							responsive, and user-centric applications that deliver seamless
 							user experiences from frontend to backend.
 						</p>
 						<p className="text-muted-foreground mb-4">
 							My journey in web development began during my university years,
 							where I discovered my passion for creating interactive user
-							interfaces. Since then, I've worked with various companies and
-							clients, helping them bring their ideas to life through clean code
-							and modern design.
+							interfaces and solving complex problems through code.
 						</p>
 						<p className="text-muted-foreground">
 							When I'm not coding, you can find me exploring new technologies,
@@ -180,15 +180,21 @@ export default function AboutPage() {
 					<div className="absolute left-4 top-0 bottom-0 w-0.5 bg-orange-200 dark:bg-orange-900/30"></div>
 					<div className="space-y-12">
 						<TimelineItem
+							year="2025"
+							title="Backend Development with Nest.js"
+							description="building backend services using Nest.js, focusing on creating efficient and scalable server-side applications."
+							icon={<Briefcase className="h-5 w-5" />}
+						/>
+						<TimelineItem
 							year="2024"
 							title="MERN Stack Projects"
 							description="Enhanced my skills by building full MERN stack applications, integrating MongoDB, Express, React, and Node.js for end-to-end solutions."
-							icon={<Briefcase className="h-5 w-5" />}
+							icon={<TextSelection className="h-5 w-5" />}
 						/>
 						<TimelineItem
 							year="2023"
 							title="Backend Development with Node.js"
-							description="Started diving into backend technologies such as Node.js and Express.js, building full-stack application capabilities."
+							description="Started diving into backend technologies such as Node.js and Express.js, Nest.js building full-stack application capabilities."
 							icon={<Code className="h-5 w-5" />}
 						/>
 						<TimelineItem
