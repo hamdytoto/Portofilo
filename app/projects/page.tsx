@@ -131,12 +131,12 @@ function ProjectGrid({ projects }: { projects: any }) {
 								size="sm"
 								className="bg-orange-500 hover:bg-orange-600"
 							>
-								<Link href={project.demoUrl}>
+								<Link href={project.demoUrl} target="_blank">
 									<ExternalLink className="mr-2 h-4 w-4" /> Live Demo
 								</Link>
 							</Button>
 							<Button asChild size="sm" variant="outline">
-								<Link href={project.githubUrl}>
+								<Link href={project.githubUrl} target="_blank">
 									<Github className="mr-2 h-4 w-4" /> Code
 								</Link>
 							</Button>

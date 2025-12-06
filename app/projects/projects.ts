@@ -12,57 +12,46 @@ export const projects = [
     },
     {
         id: 2,
-        title: "Analytics Dashboard",
+        title: "Ticketory",
         description:
-            "A responsive analytics dashboard with real-time data visualization and reporting features.",
-        image: "/placeholder.svg?height=400&width=800",
-        tags: ["React", "TypeScript", "D3.js", "Tailwind CSS"],
-        demoUrl: "#",
-        githubUrl: "#",
+            "Ticketory is an event ticketing platform that allows users to create tickets it was a graduation project for working on university ",
+        image: "https://res.cloudinary.com/dheffyjlk/image/upload/v1764444325/7a844880-a550-49c0-8ac6-98ba96a0549b.png",
+        tags: ["React", "JavaScript", "Redux","Firebase","Tailwind CSS"],
+        demoUrl: "https://ticketory.netlify.app",
+        githubUrl: "https://github.com/hamdytoto/ticktory",
         category: "frontend",
     },
     {
         id: 3,
-        title: "Social Media App",
-        description:
-            "A social networking application with user profiles, posts, and real-time messaging.",
-        image: "/placeholder.svg?height=400&width=800",
-        tags: ["Next.js", "React", "TypeScript", "Firebase"],
-        demoUrl: "#",
-        githubUrl: "#",
-        category: "frontend",
-    },
-    {
-        id: 4,
-        title: "Task Management Tool",
-        description:
-            "A productivity application for managing tasks, projects, and team collaboration.",
-        image: "/placeholder.svg?height=400&width=800",
-        tags: ["React", "TypeScript", "Redux", "Tailwind CSS"],
-        demoUrl: "#",
-        githubUrl: "#",
-        category: "other",
-    },
-    {
-        id: 5,
-        title: "Weather Application",
-        description:
-            "A weather forecast application with location-based services and interactive maps.",
-        image: "/placeholder.svg?height=400&width=800",
-        tags: ["React", "TypeScript", "API Integration", "Geolocation"],
-        demoUrl: "#",
-        githubUrl: "#",
-        category: "other",
-    },
-    {
-        id: 6,
         title: "Portfolio Website",
         description:
             "A responsive portfolio website showcasing projects and skills with modern design.",
-        image: "/placeholder.svg?height=400&width=800",
+        image: "https://res.cloudinary.com/dheffyjlk/image/upload/v1764443930/86fe1cc5-e47f-490f-9efd-459a9bb7b967.png",
         tags: ["Next.js", "React", "TypeScript", "Framer Motion"],
-        demoUrl: "#",
-        githubUrl: "#",
+        demoUrl: "https://hamdytoto.netlify.app",
+        githubUrl: "https://github.com/hamdytoto/Portofilo",
+        category: "frontend",
+    },
+    {
+        id: 5,
+        title: "Weatherly",
+        description:
+            "A weather forecast application with location-based services and interactive maps.",
+        image: "https://res.cloudinary.com/dheffyjlk/image/upload/v1764445662/8a0bbb56-47a2-4ea6-b239-6041b859bcc2.png",
+        tags: ["React", "TypeScript", "API Integration", "Geolocation"],
+        demoUrl: "https://weatherlytoto.netlify.app/",
+        githubUrl: "https://github.com/hamdytoto/Weatherly",
+        category: "frontend",
+    },
+    {
+        id: 22,
+        title: "Youtube Clone",
+        description:
+            "simple youtube clone with html and css only",
+        image: "/youtube.png",
+        tags: ["Html", "CSS","Icons"],
+        demoUrl: "https://hamdytoto.github.io/Youtube_simulation/index.html",
+        githubUrl: "https://github.com/hamdytoto/Youtube_simulation",
         category: "frontend",
     },
 
@@ -102,39 +91,7 @@ export const projects = [
     },
 
     // ------------- NEW FRONTEND PROJECTS -------------
-    {
-        id: 10,
-        title: "AI Image Generator",
-        description:
-            "Frontend UI for generating images using AI with prompt history and sharing.",
-        image: "/placeholder.svg?height=400&width=800",
-        tags: ["Next.js", "Tailwind", "React Query", "OpenAI API"],
-        demoUrl: "#",
-        githubUrl: "#",
-        category: "frontend",
-    },
+    
 
-    // ------------- NEW OTHER PROJECTS -------------
-    {
-        id: 11,
-        title: "CLI Productivity Tool",
-        description:
-            "Terminal based task and note manager with shortcuts and offline support.",
-        image: "/placeholder.svg?height=400&width=800",
-        tags: ["Node.js", "ESM", "Commander.js"],
-        demoUrl: "#",
-        githubUrl: "#",
-        category: "other",
-    },
-    {
-        id: 12,
-        title: "System Monitor Script",
-        description:
-            "Auto-monitor CPU, memory, performance logs and alerts.",
-        image: "/placeholder.svg?height=400&width=800",
-        tags: ["Python", "Linux", "Shell"],
-        demoUrl: "#",
-        githubUrl: "#",
-        category: "other",
-    },
+    
 ]
