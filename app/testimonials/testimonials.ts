@@ -6,7 +6,7 @@ export const testimonials = [
     role: "Angular Frontend Developer",
     content:
       "Working with this developer was an absolute pleasure. He delivered our project on time and exceeded our expectations with their attention to detail and creative solutions.",
-    avatar: "https://hamed-elhageen.netlify.app/one-min.webp",
+    avatar: "https://media.licdn.com/dms/image/v2/D4D03AQGM4cSjuhlXEQ/profile-displayphoto-crop_800_800/B4DZenbHgLGUAI-/0/1750860595496?e=1766620800&v=beta&t=V6dgxKzjrY-TZljtSYDfMmR6Gf5DF9pgYb8qHwPm3t0",
     initials: "HR",
   },
   {

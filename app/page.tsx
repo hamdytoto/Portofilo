@@ -297,7 +297,7 @@ export default function Home() {
 									</div>
 
 									<Button asChild variant="outline" size="sm">
-										<Link href={`/projects/${project.id}`}>
+										<Link href={project.demoUrl} target="_blank" rel="noopener noreferrer">
 											View Project <ArrowRight className="ml-2 h-4 w-4" />
 										</Link>
 									</Button>
