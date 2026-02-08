@@ -93,11 +93,11 @@ export default function Home() {
 						>
 							<div className="relative aspect-square overflow-hidden rounded-full border-8 border-orange-100 dark:border-orange-900/30 shadow-xl mx-auto max-w-md">
 								<Image
-									src="/hamdy.jpg?height=600&width=600"
+									src="/portofilo-image.png?height=600&width=600"
 									alt="Developer Portrait"
 									width={600}
 									height={600}
-									className="object-cover"
+									className="object-cover w-full h-full"
 									priority
 								/>
 							</div>
