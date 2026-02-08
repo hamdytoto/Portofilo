@@ -46,6 +46,7 @@ export default function ProjectsPage() {
 					<TabsTrigger value="all">All</TabsTrigger>
 					<TabsTrigger value="backend">Backend</TabsTrigger>
 					<TabsTrigger value="frontend">Frontend</TabsTrigger>
+					<TabsTrigger value="desktop">Desktop</TabsTrigger>
 					<TabsTrigger value="other">Other</TabsTrigger>
 				</TabsList>
 
@@ -60,6 +61,11 @@ export default function ProjectsPage() {
 				<TabsContent value="backend">
 					<ProjectGrid
 						projects={projects.filter((p) => p.category === "backend")}
+					/>
+				</TabsContent>
+				<TabsContent value="desktop">
+					<ProjectGrid
+						projects={projects.filter((p) => p.category === "desktop")}
 					/>
 				</TabsContent>
 				<TabsContent value="other">
@@ -176,6 +182,8 @@ function ProjectGrid({ projects }: { projects: any }) {
 const typeColors: Record<string, string> = {
 	Frontend: "bg-blue-500/90",
 	Backend: "bg-green-500/90",
-	"Full-Stack": "bg-green-500/90",
+	"Full-Stack": "bg-cyan-500/90",
 	Other: "bg-gray-500/90",
+	Desktop: "bg-red-500/90",
+	Mobile: "bg-purple-500/90",
 };

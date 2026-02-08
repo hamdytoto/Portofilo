@@ -38,7 +38,7 @@ export const projects = [
         type: "Frontend",
     },
     {
-        id: 5,
+        id: 4,
         title: "Weatherly",
         description:
             "A weather forecast application with location-based services and interactive maps.",
@@ -50,7 +50,7 @@ export const projects = [
         category: "frontend",
     },
     {
-        id: 22,
+        id: 5,
         title: "Youtube Clone",
         description:
             "simple youtube clone with html and css only",
@@ -64,7 +64,7 @@ export const projects = [
 
     // ------------- NEW BACKEND PROJECTS -------------
     {
-        id: 7,
+        id: 6,
         title: "Job Nest API",
         description:
             "The JobNest is a specialized platform designed to help users find job opportunities that are highly relevant to their domain or area of interest. Built with a modular and scalable architecture, the app ensures a seamless and intuitive experience for job seekers.",
@@ -76,7 +76,7 @@ export const projects = [
         type: "Backend",
     },
     {
-        id: 8,
+        id: 7,
         title: "Social Application API",
         description:
             "A real-time social media application backend with user authentication, posts, comments, and likes functionality.",
@@ -89,7 +89,7 @@ export const projects = [
 
     },
     {
-        id: 9,
+        id: 8,
         title: "Saraha App API",
         description:
             "A backend API for an anonymous feedback application allowing users to send and receive messages securely.",
@@ -100,8 +100,30 @@ export const projects = [
         category: "backend",
         type: "Backend",
     },
+    {
+        id: 9,
+        title: "Whkalah System ",
+        description:"it's a desktop application for Managing a Agency for Fruits and Vegetables , it connects the customers with the suppliers and the delivery team to make the process of ordering and delivering more efficient and smooth",
+        image: "https://res.cloudinary.com/dheffyjlk/image/upload/v1770537140/Screenshot_2026-02-06_210332_ure5e4.png",
+        tags: ["C#", "WPF", "SQlite", ".NET"],
+        demoUrl: "#",
+        githubUrl: "https://github.com/hamdytoto/Whkala-System-",
+        category: "desktop",
+        type: "Desktop",
+    },
+    {
+        id: 10,
+        title: "Momentum",
+        description:"A mobile application for managing daily tasks and boosting productivity, featuring a sleek interface and seamless user experience.",
+        image: "https://res.cloudinary.com/dheffyjlk/image/upload/v1770538312/Momentum_zd0qkg.png",
+        tags: ["React Native", "Expo", "Firebase", "TypeScript"],
+        demoUrl: "#",
+        githubUrl: "#",
+        category: "other",
+        type: "Mobile",
+    }
 
-    // ------------- NEW FRONTEND PROJECTS -------------
+   
     
 
     
